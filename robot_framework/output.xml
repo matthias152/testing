@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230113 18:00:43.423" rpa="false" schemaversion="3">
+<suite id="s1" name="Simpletest" source="C:\Workspace\testingrepo\robot_framework\simpletest.robot">
+<test id="s1-t1" name="AB Testing page is loading properly test" line="16">
+<kw name="Open Website" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230113 18:00:43.678" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20230113 18:00:43.677" endtime="20230113 18:00:48.843"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230113 18:00:48.843" endtime="20230113 18:00:48.973"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230113 18:00:48.973" endtime="20230113 18:00:48.974"/>
+</kw>
+<status status="PASS" starttime="20230113 18:00:43.677" endtime="20230113 18:00:48.974"/>
+</kw>
+<kw name="Check If Page Is Loaded">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Welcome to the-internet</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230113 18:00:48.993" level="INFO">Current page contains text 'Welcome to the-internet'.</msg>
+<status status="PASS" starttime="20230113 18:00:48.976" endtime="20230113 18:00:48.993"/>
+</kw>
+<status status="PASS" starttime="20230113 18:00:48.976" endtime="20230113 18:00:48.994"/>
+</kw>
+<kw name="Go to A/B Testing">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AB_TESTING}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230113 18:00:48.995" level="INFO">Clicking element '//a[normalize-space()='A/B Testng']'.</msg>
+<msg timestamp="20230113 18:00:49.166" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selenium-screenshot-1.png"&gt;&lt;img src="screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230113 18:00:49.167" level="FAIL">Element with locator '//a[normalize-space()='A/B Testng']' not found.</msg>
+<status status="FAIL" starttime="20230113 18:00:48.994" endtime="20230113 18:00:49.168"/>
+</kw>
+<status status="FAIL" starttime="20230113 18:00:48.994" endtime="20230113 18:00:49.169"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230113 18:00:49.169" endtime="20230113 18:00:51.520"/>
+</kw>
+<status status="FAIL" starttime="20230113 18:00:43.676" endtime="20230113 18:00:51.521">Element with locator '//a[normalize-space()='A/B Testng']' not found.</status>
+</test>
+<test id="s1-t2" name="Login Testing" line="22">
+<kw name="Open Website" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230113 18:00:51.531" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/'.</msg>
+<status status="PASS" starttime="20230113 18:00:51.529" endtime="20230113 18:00:55.131"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230113 18:00:55.131" endtime="20230113 18:00:55.251"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20230113 18:00:55.251" endtime="20230113 18:00:55.252"/>
+</kw>
+<status status="PASS" starttime="20230113 18:00:51.528" endtime="20230113 18:00:55.252"/>
+</kw>
+<kw name="Check If Page Is Loaded">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Welcome to the-internet</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230113 18:00:55.273" level="INFO">Current page contains text 'Welcome to the-internet'.</msg>
+<status status="PASS" starttime="20230113 18:00:55.255" endtime="20230113 18:00:55.273"/>
+</kw>
+<status status="PASS" starttime="20230113 18:00:55.253" endtime="20230113 18:00:55.273"/>
+</kw>
+<kw name="Go To Login Page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN_PAGE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230113 18:00:55.275" level="INFO">Clicking element '//a[normalize-space()='Form Authentication']'.</msg>
+<status status="PASS" starttime="20230113 18:00:55.274" endtime="20230113 18:00:55.794"/>
+</kw>
+<status status="PASS" starttime="20230113 18:00:55.274" endtime="20230113 18:00:55.794"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<arg>matt</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230113 18:00:55.795" level="INFO">Typing text 'matt' into text field '//input[@id='username']'.</msg>
+<status status="PASS" starttime="20230113 18:00:55.795" endtime="20230113 18:00:55.891"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>matt1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230113 18:00:55.893" level="INFO">Typing text 'matt1' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20230113 18:00:55.892" endtime="20230113 18:00:55.983"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230113 18:00:55.986" level="INFO">Clicking element '//i[@class='fa fa-2x fa-sign-in']'.</msg>
+<status status="PASS" starttime="20230113 18:00:55.985" endtime="20230113 18:00:56.418"/>
+</kw>
+<status status="PASS" starttime="20230113 18:00:55.985" endtime="20230113 18:00:56.419"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Your username is invalid!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230113 18:00:56.436" level="INFO">Current page contains text 'Your username is invalid!'.</msg>
+<status status="PASS" starttime="20230113 18:00:56.419" endtime="20230113 18:00:56.436"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230113 18:00:56.437" endtime="20230113 18:00:56.478"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230113 18:00:56.479" endtime="20230113 18:00:56.515"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<arg>tomsmith</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230113 18:00:56.517" level="INFO">Typing text 'tomsmith' into text field '//input[@id='username']'.</msg>
+<status status="PASS" starttime="20230113 18:00:56.516" endtime="20230113 18:00:56.588"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>matt1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230113 18:00:56.589" level="INFO">Typing text 'matt1' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20230113 18:00:56.589" endtime="20230113 18:00:56.658"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230113 18:00:56.660" level="INFO">Clicking element '//i[@class='fa fa-2x fa-sign-in']'.</msg>
+<status status="PASS" starttime="20230113 18:00:56.659" endtime="20230113 18:00:57.061"/>
+</kw>
+<status status="PASS" starttime="20230113 18:00:56.659" endtime="20230113 18:00:57.061"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Your password is invalid!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230113 18:00:57.082" level="INFO">Current page contains text 'Your password is invalid!'.</msg>
+<status status="PASS" starttime="20230113 18:00:57.061" endtime="20230113 18:00:57.082"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${USERNAME_INPUT}</arg>
+<arg>tomsmith</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230113 18:00:57.083" level="INFO">Typing text 'tomsmith' into text field '//input[@id='username']'.</msg>
+<status status="PASS" starttime="20230113 18:00:57.083" endtime="20230113 18:00:57.163"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PASSWORD_INPUT}</arg>
+<arg>SuperSecretPassword!</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230113 18:00:57.164" level="INFO">Typing text 'SuperSecretPassword!' into text field '//input[@id='password']'.</msg>
+<status status="PASS" starttime="20230113 18:00:57.163" endtime="20230113 18:00:57.259"/>
+</kw>
+<kw name="Click Login Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230113 18:00:57.261" level="INFO">Clicking element '//i[@class='fa fa-2x fa-sign-in']'.</msg>
+<status status="PASS" starttime="20230113 18:00:57.261" endtime="20230113 18:00:57.688"/>
+</kw>
+<status status="PASS" starttime="20230113 18:00:57.260" endtime="20230113 18:00:57.689"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>You logged into a secure area!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230113 18:00:57.705" level="INFO">Current page contains text 'You logged into a secure area!'.</msg>
+<status status="PASS" starttime="20230113 18:00:57.689" endtime="20230113 18:00:57.706"/>
+</kw>
+<kw name="Click Logout Button">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGOUT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230113 18:00:57.708" level="INFO">Clicking element '//i[@class='icon-2x icon-signout']'.</msg>
+<status status="PASS" starttime="20230113 18:00:57.707" endtime="20230113 18:00:58.127"/>
+</kw>
+<status status="PASS" starttime="20230113 18:00:57.706" endtime="20230113 18:00:58.127"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>You logged out of the secure area!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230113 18:00:58.144" level="INFO">Current page contains text 'You logged out of the secure area!'.</msg>
+<status status="PASS" starttime="20230113 18:00:58.127" endtime="20230113 18:00:58.144"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230113 18:00:58.145" endtime="20230113 18:01:01.355"/>
+</kw>
+<status status="PASS" starttime="20230113 18:00:51.526" endtime="20230113 18:01:01.356"/>
+</test>
+<status status="FAIL" starttime="20230113 18:00:43.425" endtime="20230113 18:01:01.363"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Simpletest">Simpletest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
