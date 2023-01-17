@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230117 16:56:31.016" rpa="false" schemaversion="3">
+<suite id="s1" name="Firsttest" source="C:\Workspace\testingrepo\robot_framework\potests\tests\firsttest.robot">
+<test id="s1-t1" name="Adding Product To Cart" line="20">
+<kw name="Open Browser At Main Page" library="generic" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230117 16:56:31.273" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<status status="PASS" starttime="20230117 16:56:31.272" endtime="20230117 16:56:35.619"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230117 16:56:35.620" endtime="20230117 16:56:35.742"/>
+</kw>
+<status status="PASS" starttime="20230117 16:56:31.272" endtime="20230117 16:56:35.742"/>
+</kw>
+<kw name="Go To Products Page" library="generic">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230117 16:56:37.749" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230117 16:56:35.743" endtime="20230117 16:56:37.749"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${MEN_NAVBAR}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230117 16:56:37.752" level="INFO">Simulating Mouse Over on element '//span[normalize-space()='Men']'.</msg>
+<status status="PASS" starttime="20230117 16:56:37.750" endtime="20230117 16:56:38.099"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${TOPS_NAVBAR}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230117 16:56:38.102" level="INFO">Simulating Mouse Over on element '//a[@id='ui-id-17']//span[contains(text(),'Tops')]'.</msg>
+<status status="PASS" starttime="20230117 16:56:38.100" endtime="20230117 16:56:38.414"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${JACKET_NAVBAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230117 16:56:38.417" level="INFO">Clicking element '//a[@id='ui-id-19']//span[contains(text(),'Jackets')]'.</msg>
+<status status="PASS" starttime="20230117 16:56:38.415" endtime="20230117 16:56:39.733"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230117 16:56:43.745" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230117 16:56:39.733" endtime="20230117 16:56:43.745"/>
+</kw>
+<status status="PASS" starttime="20230117 16:56:35.743" endtime="20230117 16:56:43.745"/>
+</kw>
+<kw name="Add Items To Cart" library="Products">
+<arg>${product}</arg>
+<msg timestamp="20230117 16:56:43.746" level="INFO">Simulating Mouse Over on element '//img[@alt='Proteus Fitness Jackshirt']'.</msg>
+<msg timestamp="20230117 16:56:45.039" level="INFO">Clicking element '(//span[contains(text(),'Add to Cart')])'.</msg>
+<msg timestamp="20230117 16:56:47.397" level="INFO">Clicking element '//div[@id='option-label-size-143-item-168']'.</msg>
+<msg timestamp="20230117 16:56:47.496" level="INFO">Clicking element '//div[@id='option-label-color-93-item-50']'.</msg>
+<msg timestamp="20230117 16:56:47.574" level="INFO">Clicking element '//span[normalize-space()='Add to Cart']'.</msg>
+<status status="PASS" starttime="20230117 16:56:43.746" endtime="20230117 16:56:49.195"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230117 16:56:49.197" endtime="20230117 16:56:51.619"/>
+</kw>
+<status status="PASS" starttime="20230117 16:56:31.271" endtime="20230117 16:56:51.620"/>
+</test>
+<doc>Tests for ecommerce website</doc>
+<status status="PASS" starttime="20230117 16:56:31.018" endtime="20230117 16:56:51.625"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Firsttest">Firsttest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

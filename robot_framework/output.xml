@@ -1,218 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230113 18:00:43.423" rpa="false" schemaversion="3">
-<suite id="s1" name="Simpletest" source="C:\Workspace\testingrepo\robot_framework\simpletest.robot">
-<test id="s1-t1" name="AB Testing page is loading properly test" line="16">
-<kw name="Open Website" type="SETUP">
+<robot generator="Robot 6.0.2 (Python 3.9.0 on win32)" generated="20230117 18:29:39.220" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="c:\Workspace\testingrepo\robot_framework\potests\tests\tests.robot">
+<test id="s1-t1" name="Adding Product To Cart And Checkout" line="28">
+<kw name="Open Browser At Main Page" library="generic" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230113 18:00:43.678" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/'.</msg>
-<status status="PASS" starttime="20230113 18:00:43.677" endtime="20230113 18:00:48.843"/>
+<msg timestamp="20230117 18:29:39.555" level="INFO">Opening browser 'chrome' to base url 'https://magento.softwaretestingboard.com/'.</msg>
+<status status="PASS" starttime="20230117 18:29:39.553" endtime="20230117 18:29:44.227"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230113 18:00:48.843" endtime="20230113 18:00:48.973"/>
+<status status="PASS" starttime="20230117 18:29:44.227" endtime="20230117 18:29:44.463"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
-<arg>screenshots</arg>
+<arg>/potests/tests/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20230113 18:00:48.973" endtime="20230113 18:00:48.974"/>
+<status status="PASS" starttime="20230117 18:29:44.464" endtime="20230117 18:29:44.466"/>
 </kw>
-<status status="PASS" starttime="20230113 18:00:43.677" endtime="20230113 18:00:48.974"/>
+<status status="PASS" starttime="20230117 18:29:39.552" endtime="20230117 18:29:44.467"/>
 </kw>
-<kw name="Check If Page Is Loaded">
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Welcome to the-internet</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230113 18:00:48.993" level="INFO">Current page contains text 'Welcome to the-internet'.</msg>
-<status status="PASS" starttime="20230113 18:00:48.976" endtime="20230113 18:00:48.993"/>
+<kw name="Go To Products Page" library="generic">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230117 18:29:46.477" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230117 18:29:44.471" endtime="20230117 18:29:46.478"/>
 </kw>
-<status status="PASS" starttime="20230113 18:00:48.976" endtime="20230113 18:00:48.994"/>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${MEN_NAVBAR}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230117 18:29:46.481" level="INFO">Simulating Mouse Over on element '//span[normalize-space()='Men']'.</msg>
+<status status="PASS" starttime="20230117 18:29:46.479" endtime="20230117 18:29:46.789"/>
 </kw>
-<kw name="Go to A/B Testing">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${TOPS_NAVBAR}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230117 18:29:46.791" level="INFO">Simulating Mouse Over on element '//a[@id='ui-id-17']//span[contains(text(),'Tops')]'.</msg>
+<status status="PASS" starttime="20230117 18:29:46.790" endtime="20230117 18:29:47.107"/>
+</kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${AB_TESTING}</arg>
+<arg>${JACKET_NAVBAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230113 18:00:48.995" level="INFO">Clicking element '//a[normalize-space()='A/B Testng']'.</msg>
-<msg timestamp="20230113 18:00:49.166" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/selenium-screenshot-1.png"&gt;&lt;img src="screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230113 18:00:49.167" level="FAIL">Element with locator '//a[normalize-space()='A/B Testng']' not found.</msg>
-<status status="FAIL" starttime="20230113 18:00:48.994" endtime="20230113 18:00:49.168"/>
+<msg timestamp="20230117 18:29:47.110" level="INFO">Clicking element '//a[@id='ui-id-19']//span[contains(text(),'Jackets')]'.</msg>
+<status status="PASS" starttime="20230117 18:29:47.108" endtime="20230117 18:29:49.514"/>
 </kw>
-<status status="FAIL" starttime="20230113 18:00:48.994" endtime="20230113 18:00:49.169"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230117 18:29:51.519" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230117 18:29:49.514" endtime="20230117 18:29:51.520"/>
+</kw>
+<status status="PASS" starttime="20230117 18:29:44.470" endtime="20230117 18:29:51.520"/>
+</kw>
+<kw name="Add Items To Cart" library="AddProduct">
+<arg>${product}</arg>
+<msg timestamp="20230117 18:29:51.522" level="INFO">Simulating Mouse Over on element '//img[@alt='Proteus Fitness Jackshirt']'.</msg>
+<msg timestamp="20230117 18:29:52.834" level="INFO">Clicking element '(//span[contains(text(),'Add to Cart')])'.</msg>
+<msg timestamp="20230117 18:29:55.661" level="INFO">Clicking element '//div[@id='option-label-size-143-item-168']'.</msg>
+<msg timestamp="20230117 18:29:55.766" level="INFO">Clicking element '//div[@id='option-label-color-93-item-50']'.</msg>
+<msg timestamp="20230117 18:29:55.863" level="INFO">Clicking element '//span[normalize-space()='Add to Cart']'.</msg>
+<status status="PASS" starttime="20230117 18:29:51.521" endtime="20230117 18:29:57.784"/>
+</kw>
+<kw name="Proceed To Checkout" library="ProductDetail">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SHOPPING_CART}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230117 18:29:57.787" level="INFO">Clicking element '//a[@class='action showcart']'.</msg>
+<status status="PASS" starttime="20230117 18:29:57.786" endtime="20230117 18:29:57.878"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PROCEED_TO_CHECKOUT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230117 18:29:57.879" level="INFO">Clicking element '//button[@id='top-cart-btn-checkout']'.</msg>
+<status status="PASS" starttime="20230117 18:29:57.878" endtime="20230117 18:29:59.252"/>
+</kw>
+<status status="PASS" starttime="20230117 18:29:57.785" endtime="20230117 18:29:59.253"/>
+</kw>
+<kw name="Added Product Should Be In Checkout Page" library="CheckoutPage">
+<arg>dsadsa</arg>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${product}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230117 18:29:59.587" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../potests/tests/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../../../potests/tests/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230117 18:29:59.589" level="FAIL">Page should have contained text 'dsadsa' but did not.</msg>
+<status status="FAIL" starttime="20230117 18:29:59.257" endtime="20230117 18:29:59.593"/>
+</kw>
+<status status="FAIL" starttime="20230117 18:29:59.253" endtime="20230117 18:29:59.593"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230117 18:29:59.595" endtime="20230117 18:29:59.596"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230113 18:00:49.169" endtime="20230113 18:00:51.520"/>
+<status status="PASS" starttime="20230117 18:29:59.605" endtime="20230117 18:30:01.926"/>
 </kw>
-<status status="FAIL" starttime="20230113 18:00:43.676" endtime="20230113 18:00:51.521">Element with locator '//a[normalize-space()='A/B Testng']' not found.</status>
+<status status="FAIL" starttime="20230117 18:29:39.551" endtime="20230117 18:30:01.929">Page should have contained text 'dsadsa' but did not.</status>
 </test>
-<test id="s1-t2" name="Login Testing" line="22">
-<kw name="Open Website" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230113 18:00:51.531" level="INFO">Opening browser 'chrome' to base url 'http://the-internet.herokuapp.com/'.</msg>
-<status status="PASS" starttime="20230113 18:00:51.529" endtime="20230113 18:00:55.131"/>
-</kw>
-<kw name="Maximize Browser Window" library="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230113 18:00:55.131" endtime="20230113 18:00:55.251"/>
-</kw>
-<kw name="Set Screenshot Directory" library="SeleniumLibrary">
-<arg>screenshots</arg>
-<doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20230113 18:00:55.251" endtime="20230113 18:00:55.252"/>
-</kw>
-<status status="PASS" starttime="20230113 18:00:51.528" endtime="20230113 18:00:55.252"/>
-</kw>
-<kw name="Check If Page Is Loaded">
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Welcome to the-internet</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230113 18:00:55.273" level="INFO">Current page contains text 'Welcome to the-internet'.</msg>
-<status status="PASS" starttime="20230113 18:00:55.255" endtime="20230113 18:00:55.273"/>
-</kw>
-<status status="PASS" starttime="20230113 18:00:55.253" endtime="20230113 18:00:55.273"/>
-</kw>
-<kw name="Go To Login Page">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${LOGIN_PAGE}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230113 18:00:55.275" level="INFO">Clicking element '//a[normalize-space()='Form Authentication']'.</msg>
-<status status="PASS" starttime="20230113 18:00:55.274" endtime="20230113 18:00:55.794"/>
-</kw>
-<status status="PASS" starttime="20230113 18:00:55.274" endtime="20230113 18:00:55.794"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${USERNAME_INPUT}</arg>
-<arg>matt</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230113 18:00:55.795" level="INFO">Typing text 'matt' into text field '//input[@id='username']'.</msg>
-<status status="PASS" starttime="20230113 18:00:55.795" endtime="20230113 18:00:55.891"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<arg>matt1</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230113 18:00:55.893" level="INFO">Typing text 'matt1' into text field '//input[@id='password']'.</msg>
-<status status="PASS" starttime="20230113 18:00:55.892" endtime="20230113 18:00:55.983"/>
-</kw>
-<kw name="Click Login Button">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230113 18:00:55.986" level="INFO">Clicking element '//i[@class='fa fa-2x fa-sign-in']'.</msg>
-<status status="PASS" starttime="20230113 18:00:55.985" endtime="20230113 18:00:56.418"/>
-</kw>
-<status status="PASS" starttime="20230113 18:00:55.985" endtime="20230113 18:00:56.419"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Your username is invalid!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230113 18:00:56.436" level="INFO">Current page contains text 'Your username is invalid!'.</msg>
-<status status="PASS" starttime="20230113 18:00:56.419" endtime="20230113 18:00:56.436"/>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>${USERNAME_INPUT}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20230113 18:00:56.437" endtime="20230113 18:00:56.478"/>
-</kw>
-<kw name="Clear Element Text" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" starttime="20230113 18:00:56.479" endtime="20230113 18:00:56.515"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${USERNAME_INPUT}</arg>
-<arg>tomsmith</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230113 18:00:56.517" level="INFO">Typing text 'tomsmith' into text field '//input[@id='username']'.</msg>
-<status status="PASS" starttime="20230113 18:00:56.516" endtime="20230113 18:00:56.588"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<arg>matt1</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230113 18:00:56.589" level="INFO">Typing text 'matt1' into text field '//input[@id='password']'.</msg>
-<status status="PASS" starttime="20230113 18:00:56.589" endtime="20230113 18:00:56.658"/>
-</kw>
-<kw name="Click Login Button">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230113 18:00:56.660" level="INFO">Clicking element '//i[@class='fa fa-2x fa-sign-in']'.</msg>
-<status status="PASS" starttime="20230113 18:00:56.659" endtime="20230113 18:00:57.061"/>
-</kw>
-<status status="PASS" starttime="20230113 18:00:56.659" endtime="20230113 18:00:57.061"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Your password is invalid!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230113 18:00:57.082" level="INFO">Current page contains text 'Your password is invalid!'.</msg>
-<status status="PASS" starttime="20230113 18:00:57.061" endtime="20230113 18:00:57.082"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${USERNAME_INPUT}</arg>
-<arg>tomsmith</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230113 18:00:57.083" level="INFO">Typing text 'tomsmith' into text field '//input[@id='username']'.</msg>
-<status status="PASS" starttime="20230113 18:00:57.083" endtime="20230113 18:00:57.163"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${PASSWORD_INPUT}</arg>
-<arg>SuperSecretPassword!</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230113 18:00:57.164" level="INFO">Typing text 'SuperSecretPassword!' into text field '//input[@id='password']'.</msg>
-<status status="PASS" starttime="20230113 18:00:57.163" endtime="20230113 18:00:57.259"/>
-</kw>
-<kw name="Click Login Button">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${LOGIN_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230113 18:00:57.261" level="INFO">Clicking element '//i[@class='fa fa-2x fa-sign-in']'.</msg>
-<status status="PASS" starttime="20230113 18:00:57.261" endtime="20230113 18:00:57.688"/>
-</kw>
-<status status="PASS" starttime="20230113 18:00:57.260" endtime="20230113 18:00:57.689"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>You logged into a secure area!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230113 18:00:57.705" level="INFO">Current page contains text 'You logged into a secure area!'.</msg>
-<status status="PASS" starttime="20230113 18:00:57.689" endtime="20230113 18:00:57.706"/>
-</kw>
-<kw name="Click Logout Button">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${LOGOUT_BUTTON}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230113 18:00:57.708" level="INFO">Clicking element '//i[@class='icon-2x icon-signout']'.</msg>
-<status status="PASS" starttime="20230113 18:00:57.707" endtime="20230113 18:00:58.127"/>
-</kw>
-<status status="PASS" starttime="20230113 18:00:57.706" endtime="20230113 18:00:58.127"/>
-</kw>
-<kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>You logged out of the secure area!</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230113 18:00:58.144" level="INFO">Current page contains text 'You logged out of the secure area!'.</msg>
-<status status="PASS" starttime="20230113 18:00:58.127" endtime="20230113 18:00:58.144"/>
-</kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230113 18:00:58.145" endtime="20230113 18:01:01.355"/>
-</kw>
-<status status="PASS" starttime="20230113 18:00:51.526" endtime="20230113 18:01:01.356"/>
-</test>
-<status status="FAIL" starttime="20230113 18:00:43.425" endtime="20230113 18:01:01.363"/>
+<doc>Tests for ecommerce website</doc>
+<status status="FAIL" starttime="20230117 18:29:39.228" endtime="20230117 18:30:01.935"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="1" skip="0" id="s1" name="Simpletest">Simpletest</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
 </suite>
 </statistics>
 <errors>
