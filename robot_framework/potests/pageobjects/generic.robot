@@ -14,7 +14,7 @@ ${JACKET_NAVBAR}  //a[@id='ui-id-19']//span[contains(text(),'Jackets')]
 Open Browser At Main Page
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
-    Set Screenshot Directory    screenshots
+    # Set Screenshot Directory    screenshots
 
 Go To Products Page
     Sleep  2
